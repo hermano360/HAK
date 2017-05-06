@@ -1602,7 +1602,8 @@
 
 .imdb_signup_logo {
   margin: 5px;
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 90px; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
