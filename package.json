@@ -1,0 +1,34 @@
+{
+  "name": "wod-scraper",
+  "version": "1.0.0",
+  "description": "Scraping mutiny website to get latest workouts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "#.git"
+  },
+  "keywords": [
+    "crossfit",
+    "workout",
+    "of",
+    "the",
+    "day",
+    "wod",
+    "mutiny"
+  ],
+  "author": "Herminio Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "cron": "^1.2.1",
+    "dotenv": "^4.0.0",
+    "https": "^1.0.0",
+    "mongodb": "^2.2.25",
+    "querystring": "^0.2.0",
+    "request": "^2.81.0",
+    "scraperjs": "^1.2.0"
+  }
+}
