@@ -13,138 +13,46 @@ MongoClient = require('mongodb').MongoClient,
 
 
 //itemCollector('http://www.homedepot.com/b/Lighting-Ceiling-Fans-Ceiling-Fans-Accessories-Ceiling-Fans/Light-Kit-Included/N-5yc1vZbvlqZ1z0tey9', 'ceiling-fans-lights');
-generateCandidate('http://www.imdb.com/name/nm0000210/?ref_=nv_sr_1');
+
+
+var candidates  = ['http://www.imdb.com/name/nm0000093/?ref_=fn_al_nm_1','http://www.imdb.com/name/nm5211242/?ref_=nv_sr_1','http://www.imdb.com/name/nm0000210/?ref_=nv_sr_1','http://www.imdb.com/name/nm0000234/?ref_=nv_cel_dflt_2','http://www.imdb.com/name/nm0000158/?ref_=nv_sr_1'];
+
+candidates.forEach((candidate)=>{generateCandidate(candidate)});
 
 function generateCandidate(url){
 	request(url,function(error,response,html){
 		if(!error){
 			var $ = cheerio.load(html);
-			var name = $('.header .itemprop').text().toString();
-      console.log(name);
-			// for(var i = 0; i < 24; i++){
-			// 	product = {};
-			// 	product.photo = $('.pod-item--'+ i+' .pod-inner .plp-pod__image a img').toString().match(/http:\/\/www\..*?.jpg/)[0];
-			// 	product.price = $('.pod-item--'+ i+' .pod-inner .price__wrapper .price').toString().replace(/.*?\s*<span class="price__format">(\$)<\/span>(.*?)<span class="price__format">(.*?)<\/span><span class="price__unit">(.*?)\D*/,'$1$2.$3$4');
-			// 	product.modelNo = modelNo = $('.pod-item--'+ i+' .pod-inner .pod-plp__model').toString().replace(/[\s\S]*&#xA0;(.*?)\s*<\/div>/,'$1');
-			// 	product.refURL = 'http://www.homedepot.com/s/'+ modelNo;
-			// 	product.description = $('.pod-item--'+ i+' .pod-inner .pod-plp__description').toString().replace(/[\s\S]*<span class="pod-plp__brand-name">(.*?)<\/span>\s*(.*)[\s\S]*/,'$1 - $2').trim();
-			// 	product.category = category;
-			// 	if(product.price!==''){
-			// 		products.push(product);
-			// 		modelNoCollection.push(modelNo);
-			// 	}
-			// }
-			//updateDatabase(products,modelNoCollection);
+      var candidate = {};
+      candidate.url = url;
+			candidate.name = $('.header .itemprop').text().toString();
+      candidate.writer = $('#filmography #filmo-head-writer').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.thanks = $('#filmography #filmo-head-thanks').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.director = $('#filmography #filmo-head-director').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.actor = $('#filmography #filmo-head-actor').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.producer = $('#filmography #filmo-head-producer').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.soundtrack = $('#filmography #filmo-head-soundtrack').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.self = $('#filmography #filmo-head-self').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+      candidate.archive_footage = $('#filmography #filmo-head-archive_footage').text().toString().replace(/[\s\S]*\((\d*).*\)/,"$1").trim();
+
+			updateDatabase(candidate);
 
 			//console.log(products.length,products);
 		}
 	});
 }
 
-function updateDatabase(products,modelNos){
+function updateDatabase(candidate){
 			var dbLink = 'mongodb://'+'hermano360'+':'+'f00tball'+'@'+'ds137090.mlab.com:37090/meadowlark';
 			MongoClient.connect(dbLink, function(err, db) {
 				console.log("Successfully connected to database");
-				db.collection('products').find({modelNo:{"$in": modelNos}}).toArray(function(err, docs) {
-					assert.equal(err, null);
-					var insertDocuments = compareModelNos(docs,products);
-					insertDocuments.forEach(function(document){
-						db.collection('products').replaceOne({modelNo: document.modelNo},document,{upsert:true});
-					});
-					console.log(insertDocuments.length+' products updated.');
-					db.close();
-				});
-			});
-}
-
-function compareModelNos(dbDocs,webDocs){
-	var upsertDocs = [];
-	var updateRequired;
-	webDocs.forEach(function(webProduct){
-		updateRequired = true;
-		dbDocs.forEach(function(dbProduct){
-			if(dbProduct.modelNo === webProduct.modelNo && dbProduct.price === webProduct.price){
-				updateRequired = false;
-			}
-		});
-		if(updateRequired){
-			upsertDocs.push(webProduct);
-		}
-	});
-
-	console.log(upsertDocs);
-	return upsertDocs;
-}
-
-function modelNoExtractor(productDocuments){
-	var modelNoCollection = [];
-	productDocument.forEach(function(product){
-		modelNoCollection.push(product.modelNo);
-	});
-	return modelNoCollection;
-}
+				db.collection('candidates').replaceOne({url: candidate.url},candidate,{upsert:true});
+				console.log(`${candidate.name} has been updated`);
+				db.close();
+      });
+    };
 
 
-function itemCollectorb(url){
-	request(url,function(error,response,html){
-		if(!error){
-			var $ = cheerio.load(html);
-			var products = [];
-			var product;
-			var modelNo;
-			var pageHTML = $('.pod-plp__container .pod-item--4').toString();
-			for(var i = 4; i < 5; i++){
-				product = {};
-				// if($('.pod-item--'+ i).toString()===''){
-				// 	console.log(i,'item not listed');
-				// 	continue;
-				// }
-
-
-				product.photo = $('.pod-plp__container').toString().replace(/([\S\s]*<span class="price__format">)(\$)<\/span>(.*?)<span class="price__format">(.*?)(<\/span><span class="price__unit">)([\s\S]*)/,'$2$3.$4');//.match(/http:\/\/www\..*?.jpg/)[0];
-				//console.log(product.photo);
-				// product.price = $('.pod-item--'+ i+' .pod-inner .price__wrapper .price').toString().replace(/.*?\s*<span class="price__format">(\$)<\/span>(.*?)<span class="price__format">(.*?)<\/span><span class="price__unit">(.*?)\D*/,'$1$2.$3$4');
-				// product.modelNo = modelNo = $('.pod-item--'+ i+' .pod-inner .pod-plp__model').toString().replace(/[\s\S]*&#xA0;(.*?)\s*<\/div>/,'$1');
-				// product.refURL = 'http://www.homedepot.com/s/'+ modelNo;
-				// product.description = $('.pod-item--'+ i+' .pod-inner .pod-plp__description').toString().replace(/[\s\S]*<span class="pod-plp__brand-name">(.*?)<\/span>\s*(.*)[\s\S]*/,'$1 - $2').trim();
-				products.push(product);
-			}
-
-			//console.log(products);
-		}
-	});
-}
-
-
-function updateMaterials(){
-		var url = "http://www.mutinycrossfit.com/wod";
-		dateCollector(url,function(datesOnWebpage){
-			var justDates = dateExtractor(datesOnWebpage);
-			var dbLink = 'mongodb://'+process.env.MLAB_USER+':'+process.env.MLAB_PW+'@'+process.env.MLAB_DB;
-				MongoClient.connect(dbLink, function(err, db) {
-					console.log("Successfully connected to database");
-					db.collection('wods').find({date:{"$in": justDates}}).toArray(function(err, docs) {
-						assert.equal(err, null);
-						var insertDocuments = compareDocsDates(docs,datesOnWebpage);
-						if(insertDocuments.length > 0){
-							db.collection('wods').insertMany(insertDocuments,function(err,res){
-								assert.equal(err,null);
-								console.log("DB updated with "+insertDocuments.length+" new documents");
-								sendMorningText(datesOnWebpage);
-								db.close();
-							});
-						} else {
-							console.log("DB already up to date!");
-							sendMorningText(datesOnWebpage);
-							db.close();
-						}
-					});
-				});
-		});
-
-		//production, will remove this and will change it only to its scheduled time.
-		job.stop();
-}
 
 function sendMorningText(wodsOnline){
 	var today = new Date();
