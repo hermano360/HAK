@@ -1,0 +1,15 @@
+// Custom Styling
+$primary-color: color("red", "lighten-1") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("amber", "darken-1") !default;
+$input-success-color: color("green", "base") !default;
+$input-error-color: color("red", "base") !default;
+$link-color: color("blue", "darken-3") !default;
+
+// talent sign up
+.imdb_signup_logo {
+  margin: 5px;
+  max-width: 100%;
+}
