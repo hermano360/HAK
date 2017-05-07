@@ -7,14 +7,15 @@ var talentsignup= React.createClass({
       <div className="container center-align">
         <Row>
           <Col s={12}>
-            <h2>Talent Sign Up Form</h2>
+            <br/>
+            <h2 className="red-text text-darken-2"><strong>Talent Sign Up Form</strong></h2>
           </Col>
         </Row>
         <Row>
           <Col s={12}>
             <div className="row valign-wrapper flow-text">
               <div className="col s4">
-                <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/IMDb-Movies-TV-logo-design-for-apps.png" className="imdb_signup_logo"/>
+                <img src="http://ia.media-imdb.com/images/M/MV5BMTczNjM0NDY0Ml5BMl5BcG5nXkFtZTgwMTk1MzQ2OTE@._V1_.png" className="imdb_signup_logo"/>
               </div>
               <div className="col s8">
                 <p>
@@ -27,15 +28,20 @@ var talentsignup= React.createClass({
             <Input s={12} id="phone" className="validate" type="tel" label="Primary Phone Number" />
             <Input s={12} id="password" className="validate" type="password" label="password" />
             <Input s={12} id="confirm-password" className="validate" type="password" label="password" />
-            <Input s={12} id="union" className="validate" type='checkbox' value='yes' label='Are You Union/Union Eligible?' />
-            <Input s={12} id="travel" className="validate" type='checkbox' value='yes' label='Are You Willing to Travel?' />
-            <Input s={12} id="passport" className="validate" type='checkbox' value='yes' label='Do You Have an Active Passport?' />
+            <Col className="left-align" m={6} offset="m3">
+              <Input s={12} id="union" className="validate" type='checkbox' value='yes' label='Are You Union/Union Eligible?' />
+              <Input s={12} id="travel" className="validate" type='checkbox' value='yes' label='Are You Willing to Travel?' />
+              <Input s={12} id="passport" className="validate" type='checkbox' value='yes' label='Do You Have an Active Passport?' />
+            <br/>
+            </Col>
           </Col>
-          <Col s={4} offset="s2">
-            <a className="waves-effect waves-light btn" href="#">Cancel</a>
+        </Row>
+        <Row>
+          <Col s={6} m={4} offset="m2">
+            <a className="waves-effect waves-light btn amber darken-2" href="#">Cancel</a>
           </Col>
-          <Col s={4}>
-            <a className="waves-effect waves-light btn" href="#/thankyou">Sign Up!</a>
+          <Col s={6} m={4}>
+            <a className="waves-effect waves-light btn amber darken-2" href="#/thankyou">Sign Up!</a>
           </Col>
 
         </Row>
