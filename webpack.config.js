@@ -29,7 +29,10 @@ module.exports = {
       Candidates:'app/components/Candidates.jsx',
       Navbar: 'app/components/Navbar.jsx',
       Main: 'app/components/Main.jsx',
-      custom: 'app/components/custom.js'
+      custom: 'app/components/custom.js',
+      signup: 'app/components/signup.jsx',
+      employerSignup: 'app/components/employersignup.jsx',
+      talentSignup: 'app/components/talentsignup.jsx'
     },
     extensions: ['','.js','.jsx']
   },
