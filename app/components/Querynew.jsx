@@ -15,13 +15,13 @@ var Querynew= React.createClass({
     return (
       <div className="container">
         <Row>
-          <Input s={12} id="title" className="validate" type="text" label="Query Title" />
-          <Input s={6} id="actor" className="validate" type="text" label="Actor Credits" />
-          <Input s={6} id="writer" className="validate" type="text" label="Writer Credits" />
+          <Input s={12} ref="title" id="title" className="validate" type="text" label="Query Title" />
+          <Input s={6} ref="actor" id="actor" className="validate" type="text" label="Actor Credits" />
+          <Input s={6} ref="writer" id="writer" className="validate" type="text" label="Writer Credits" />
           <Col className="left-align" m={6} offset="m3">
-            <Input s={12} id="union" className="validate" type='checkbox' value='yes' label='Union/Union Eligible?' />
-            <Input s={12} id="travel" className="validate" type='checkbox' value='yes' label='Travel Willingness?' />
-            <Input s={12} id="passport" className="validate" type='checkbox' value='yes' label='Active Passport Required?' />
+            <Input s={12} ref="union" id="union" className="validate" type='checkbox' label='Union/Union Eligible?' />
+            <Input s={12} ref="travel" id="travel" className="validate" type='checkbox'  label='Travel Willingness?' />
+            <Input s={12} ref="passport" id="passport" className="validate" type='checkbox'  label='Active Passport Required?' />
           </Col>
         </Row>
         <Row>
