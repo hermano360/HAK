@@ -1,10 +1,10 @@
 var React = require('react');
-import { Button, Icon, Card, Row, Col, Footer} from 'react-materialize';
+import { Row, Col } from 'react-materialize';
 
 var page1= React.createClass({
   render: function(){
     return (
-      <div className="center-align">
+      <div className="container center-align">
         <Row>
           <Col s={12}>
             <h1>Welcome to EFlash!</h1>

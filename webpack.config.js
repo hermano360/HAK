@@ -27,8 +27,9 @@ module.exports = {
       page1: 'app/components/page1.jsx',
       page2: 'app/components/page2.jsx',
       Candidates:'app/components/Candidates.jsx',
-      Nav: 'app/components/Nav.jsx',
-      Main: 'app/components/Main.jsx'
+      Navbar: 'app/components/Navbar.jsx',
+      Main: 'app/components/Main.jsx',
+      custom: 'app/components/custom.js'
     },
     extensions: ['','.js','.jsx']
   },

@@ -6,3 +6,8 @@
 @include foundation-everything;
 
 // Components
+nav {
+  ul {
+    line-height: inherit;
+  }
+}
