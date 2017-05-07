@@ -1,25 +1,25 @@
 var React = require('react');
-import { Row, Col } from 'react-materialize';
+import { Row, Col, Input } from 'react-materialize';
 
 var employerSignup= React.createClass({
   render: function(){
     return (
-      <div className="container center-align">
+      <div class="container center-align">
         <Row>
           <Col s={12}>
-            <h1>Welcome to EFlash!</h1>
-            <h3>Tagline goes here</h3>
+            <h2>Employer Sign Up Form</h2>
           </Col>
-          <Row>
-            <Col s={12}>
-              <a className="waves-effect waves-light btn amber darken-1 white-text" href="talent/signup.html">Sign Up to Get Hired</a>
-            </Col>
-          </Row>
-          <Row>
-            <Col s={12}>
-              <a className="waves-effect waves-light btn amber darken-1 white-text" href="recruiter/signup.html">Sign Up to Find the Best Talent</a>
-            </Col>
-          </Row>
+        </Row>
+        <Row>
+          <Col s={12}>
+            <Input s={12} id="email" class="validate" type="email" label="Email" />
+            <Input s={12} id="password" class="validate" type="password" label="password" />
+            <Input s={12} id="confirm-password" class="validate" type="password" label="password" />
+          </Col>
+          <Col s={12}>
+            <a class="waves-effect waves-light btn" href="#">Cancel</a>
+            <a class="waves-effect waves-light btn" href="profile.html">Sign Up!</a>
+          </Col>
         </Row>
       </div>
     )
