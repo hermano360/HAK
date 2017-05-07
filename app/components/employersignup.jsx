@@ -17,8 +17,8 @@ var employerSignup= React.createClass({
             <Input s={12} id="confirm-password" class="validate" type="password" label="password" />
           </Col>
           <Col s={12}>
-            <a class="waves-effect waves-light btn" href="#">Cancel</a>
-            <a class="waves-effect waves-light btn" href="profile.html">Sign Up!</a>
+            <a class="waves-effect waves-light btn amber darken-1" href="#">Cancel</a>
+            <a class="waves-effect waves-light btn amber darken-1" href="profile.html">Sign Up!</a>
           </Col>
         </Row>
       </div>
