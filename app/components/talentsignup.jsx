@@ -1,7 +1,7 @@
 var React = require('react');
 import { Row, Col, Input } from 'react-materialize';
 
-var talentSignup= React.createClass({
+var talentsignup= React.createClass({
   render: function(){
     return (
       <div class="container center-align">
@@ -41,4 +41,4 @@ var talentSignup= React.createClass({
   }
 });
 
-module.exports = talentSignup;
+module.exports = talentsignup;

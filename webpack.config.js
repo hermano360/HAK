@@ -30,9 +30,14 @@ module.exports = {
       Navbar: 'app/components/Navbar.jsx',
       Main: 'app/components/Main.jsx',
       custom: 'app/components/custom.js',
+      signin: 'app/components/signin.jsx',
       signup: 'app/components/signup.jsx',
-      employerSignup: 'app/components/employersignup.jsx',
-      talentSignup: 'app/components/talentsignup.jsx'
+      employer: 'app/components/employer.jsx',
+      talentsignup: 'app/components/talentsignup.jsx',
+      employersignup: 'app/components/employersignup.jsx',
+      Query: 'app/components/Query.jsx',
+      Querynew: 'app/components/Querynew.jsx',
+      Querypast: 'app/components/Querypast.jsx'
     },
     extensions: ['','.js','.jsx']
   },

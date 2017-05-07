@@ -1,10 +1,13 @@
 var React = require('react');
-import { Row, Col, Input } from 'react-materialize';
+import { Row, Col, Input,Button} from 'react-materialize';
 
-var employerSignup= React.createClass({
+var employersignup= React.createClass({
+  handleClick: function(){
+    this.props.changePhase();
+  },
   render: function(){
     return (
-      <div class="container center-align">
+      <div className="container center-align">
         <Row>
           <Col s={12}>
             <h2>Employer Sign Up Form</h2>
@@ -12,13 +15,13 @@ var employerSignup= React.createClass({
         </Row>
         <Row>
           <Col s={12}>
-            <Input s={12} id="email" class="validate" type="email" label="Email" />
-            <Input s={12} id="password" class="validate" type="password" label="password" />
-            <Input s={12} id="confirm-password" class="validate" type="password" label="password" />
+            <Input s={12} id="email" className="validate" type="email" label="Email" />
+            <Input s={12} id="password" className="validate" type="password" label="password" />
+            <Input s={12} id="confirm-password" className="validate" type="password" label="password" />
           </Col>
           <Col s={12}>
-            <a class="waves-effect waves-light btn" href="#">Cancel</a>
-            <a class="waves-effect waves-light btn" href="profile.html">Sign Up!</a>
+            <a className="waves-effect waves-light btn" href="#">Cancel</a>
+            <Button className="waves-effect waves-light btn" onClick={this.handleClick}>Sign Up!</Button>
           </Col>
         </Row>
       </div>
@@ -26,4 +29,4 @@ var employerSignup= React.createClass({
   }
 });
 
-module.exports = employerSignup;
+module.exports = employersignup;
