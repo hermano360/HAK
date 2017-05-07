@@ -1,5 +1,5 @@
 var React = require('react');
-import {Button} from 'react-materialize';
+import {Button, Row, Col} from 'react-materialize';
 
 var Candidate= React.createClass({
 
@@ -40,17 +40,30 @@ var Candidate= React.createClass({
 
     var {name,writer,actor,url,photo,union,travel,passport}=this.props;
     return (
-      <div>
-        <a href={url}>
-          <img src={photo}></img>
-        <p>Name: {name}</p>
-        {actingCredits(actor)}
-        {writingCredits(writer)}
-        Union: {convertingBooleans(union,travel,passport).union},
-        Travel : {convertingBooleans(union,travel,passport).travel},
-        Passport: {convertingBooleans(union,travel,passport).passport}
-        </a>
-        <Button className="waves-effect waves-light btn">Email Candidate!</Button>
+      <div className="container">
+        <Row>
+          <a href={url}>
+            <Col s={8} m={4} offset="s2">
+              <img src={photo}></img>
+            </Col>
+            <Col s={12} m={4} className="black-text">
+              <h3>{name}</h3>
+              <p>
+                {actingCredits(actor)}
+                {writingCredits(writer)}
+              </p>
+            </Col>
+            <Col s={12} m={4} className="black-text">
+              <p>
+                Union: {convertingBooleans(union,travel,passport).union}<br/>
+                Travel : {convertingBooleans(union,travel,passport).travel}<br/>
+                Passport: {convertingBooleans(union,travel,passport).passport}
+              </p>
+            </Col>
+          </a>
+          <Button className="waves-effect waves-light btn amber darken-2">Email Candidate!</Button>
+        </Row>
+        <hr/>
       </div>
     )
   }

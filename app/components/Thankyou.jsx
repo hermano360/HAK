@@ -12,7 +12,7 @@ var Thankyou= React.createClass({
         </Row>
         <Row>
           <Col s={12} center-align>
-            <a className="waves-effect waves-light btn amber darken-1 white-text" href="#">Return to Home Screen</a>
+            <a className="waves-effect waves-light btn amber darken-2 white-text" href="#">Return to Home Screen</a>
           </Col>
         </Row>
       </div>

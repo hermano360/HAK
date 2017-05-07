@@ -16,10 +16,10 @@ var signin= React.createClass({
             <Input s={12} id="password" className="validate" type="password" label="password" />
           </Col>
           <Col s={6}>
-            <a className="waves-effect waves-light btn amber darken-1 white-text" href="#/talentsignup">Talent</a>
+            <a className="waves-effect waves-light btn amber darken-2 white-text" href="#/talentsignup">Talent</a>
           </Col>
           <Col s={6}>
-            <a className="waves-effect waves-light btn amber darken-1 white-text" href="#/employer">Recruiter</a>
+            <a className="waves-effect waves-light btn amber darken-2 white-text" href="#/employer">Recruiter</a>
           </Col>
         </Row>
       </div>

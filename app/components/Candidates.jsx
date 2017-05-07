@@ -1,7 +1,7 @@
 var React = require('react');
 var Candidate = require('Candidate');
 var CandidatesAPI = require('CandidatesAPI');
-import {Button} from 'react-materialize';
+import {Button, Col, Row} from 'react-materialize';
 
 
 var Candidates= React.createClass({
@@ -35,11 +35,26 @@ var Candidates= React.createClass({
     };
 
     return (
-      <div>
-        <h1>Candidates Available</h1>
-        {renderCandidates()}
-          <Button className="waves-effect waves-light btn" onClick={this.handleClick}>Another Query?</Button>
-          <a className="waves-effect waves-light btn amber darken-1 white-text" href="#">Start Over</a>
+      <div className="container">
+        <Row>
+          <Col s={12}>
+            <h1 className="red-text text-darken-2">Candidates Available</h1>
+            <hr/>
+          </Col>
+        </Row>
+        <Row>
+          <Col s={12}>
+            {renderCandidates()}
+          </Col>
+        </Row>
+        <Row>
+          <Col s={6} m={4} offset="m4">
+            <Button className="waves-effect waves-light btn amber darken-2" onClick={this.handleClick}>Another Query?</Button>
+          </Col>
+          <Col s={6} m={4}>
+            <a className="waves-effect waves-light btn amber darken-2 white-text" href="#">Start Over</a>
+          </Col>
+        </Row>
       </div>
     )
   }

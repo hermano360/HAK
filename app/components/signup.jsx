@@ -21,7 +21,7 @@ var signup= React.createClass({
                 Within minutes, your profile will be visible to a wide array of
                 potential employers.
               </p>
-              <a href="#/talentsignup" className="waves-effect waves-light btn amber darken-1 white-text">Get Started</a>
+              <a href="#/talentsignup" className="waves-effect waves-light btn amber darken-2 white-text">Get Started</a>
               <p></p>
               <hr className="hide-on-med-and-up"/>
             </Col>
@@ -33,7 +33,7 @@ var signup= React.createClass({
                 down your search by selecting appropriate minimum qualifications.
                 Contact potential hires TODAY!
               </p>
-              <a href="#/employer" className="waves-effect waves-light btn amber darken-1 white-text">Start Searching</a>
+              <a href="#/employer" className="waves-effect waves-light btn amber darken-2 white-text">Start Searching</a>
               <p></p>
             </Col>
           </Col>

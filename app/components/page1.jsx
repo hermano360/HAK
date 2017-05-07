@@ -7,8 +7,8 @@ var page1= React.createClass({
       <div className="container center-align small-centered medium-6 large-4">
         <Row>
           <Col s={12}>
-            <h1>Welcome to EFlash!</h1>
-            <h3>Tagline goes here</h3>
+            <h1 className="red-text text-darken-2">Welcome to EFlash!</h1>
+            <h3>Find your next job in ... EFlash</h3>
           </Col>
           <Row>
             <Col s={12}>
