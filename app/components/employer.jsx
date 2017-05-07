@@ -18,7 +18,6 @@ var employer= React.createClass({
     this.setState({phase:'query'})
   },
   querySubmission: function(form){
-    console.log("employer",form);
     this.setState({
       phase:'display',
       actor:form.actor,

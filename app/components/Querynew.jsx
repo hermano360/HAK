@@ -4,11 +4,11 @@ import { Button,Input, Col, Row} from 'react-materialize';
 var Querynew= React.createClass({
   onSearch:function(){
     this.props.changePhase({
-      actor:3,
-      writer:5,
-      union:false,
-      travel:true,
-      passport:true
+      actor:this.refs.actor.state.value,
+      writer:this.refs.writer.state.value,
+      union:this.refs.union.state.checked,
+      travel:this.refs.travel.state.checked,
+      passport:this.refs.passport.state.checked
     });
   },
   render: function(){

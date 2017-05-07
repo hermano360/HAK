@@ -21,7 +21,6 @@ var Query= React.createClass({
     })
   },
   changePhase:function(form){
-    console.log("query",form);
     this.props.changePhase(form);
   },
   render: function(){
