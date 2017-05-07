@@ -24,8 +24,12 @@ var talentSignup= React.createClass({
             </div>
             <Input s={12} id="imdb_url" class="validate" type="text" label="IMDb URL" />
             <Input s={12} id="email" class="validate" type="email" label="Email" />
+            <Input s={12} id="phone" class="validate" type="tel" label="Primary Phone Number" />
             <Input s={12} id="password" class="validate" type="password" label="password" />
             <Input s={12} id="confirm-password" class="validate" type="password" label="password" />
+            <Input s={12} id="union" class="validate" type='checkbox' value='yes' label='Are You Union/Union Eligible?' />
+            <Input s={12} id="travel" class="validate" type='checkbox' value='yes' label='Are You Willing to Travel?' />
+            <Input s={12} id="passport" class="validate" type='checkbox' value='yes' label='Do You Have an Active Passport?' />
           </Col>
           <Col s={12}>
             <a class="waves-effect waves-light btn" href="#">Cancel</a>
