@@ -14,7 +14,7 @@ var talentsignup= React.createClass({
           <Col s={12}>
             <div className="row valign-wrapper flow-text">
               <div className="col s4">
-                <img src="../img/IMDb-logo.png" className="imdb_signup_logo"/>
+                <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/02/IMDb-Movies-TV-logo-design-for-apps.png" className="imdb_signup_logo"/>
               </div>
               <div className="col s8">
                 <p>
@@ -31,10 +31,13 @@ var talentsignup= React.createClass({
             <Input s={12} id="travel" className="validate" type='checkbox' value='yes' label='Are You Willing to Travel?' />
             <Input s={12} id="passport" className="validate" type='checkbox' value='yes' label='Do You Have an Active Passport?' />
           </Col>
-          <Col s={12}>
+          <Col s={4} offset="s2">
             <a className="waves-effect waves-light btn" href="#">Cancel</a>
+          </Col>
+          <Col s={4}>
             <a className="waves-effect waves-light btn" href="#/thankyou">Sign Up!</a>
           </Col>
+
         </Row>
       </div>
     )

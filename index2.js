@@ -15,7 +15,7 @@ MongoClient = require('mongodb').MongoClient,
 //itemCollector('http://www.homedepot.com/b/Lighting-Ceiling-Fans-Ceiling-Fans-Accessories-Ceiling-Fans/Light-Kit-Included/N-5yc1vZbvlqZ1z0tey9', 'ceiling-fans-lights');
 
 
-var candidates  = ['http://www.imdb.com/name/nm0000093/?ref_=fn_al_nm_1','http://www.imdb.com/name/nm5211242/?ref_=nv_sr_1','http://www.imdb.com/name/nm0000210/?ref_=nv_sr_1','http://www.imdb.com/name/nm0000234/?ref_=nv_cel_dflt_2','http://www.imdb.com/name/nm0000158/?ref_=nv_sr_1'];
+var candidates  = ['http://www.imdb.com/name/nm0000148/'];
 
 candidates.forEach((candidate)=>{generateCandidate(candidate)});
 

@@ -1,5 +1,5 @@
 var React = require('react');
-import { Col, Card} from 'react-materialize';
+import { Row,Col, Card} from 'react-materialize';
 
 var Querypast= React.createClass({
   onSearch1:function(){
@@ -32,7 +32,7 @@ var Querypast= React.createClass({
 
   render: function(){
     return (
-      <div>
+      <Row>
         <Col m={6} s={12}>
           <Card className='blue-grey darken-1' textClassName='white-text' title='Remember The Titans - Lead' onClick={this.onSearch1}>
             <p>Requirements:</p>
@@ -57,7 +57,7 @@ var Querypast= React.createClass({
             <p>Union: Y, Travel: Y, Passport: Y</p>
           </Card>
         </Col>
-      </div>
+      </Row>
     )
   }
 })

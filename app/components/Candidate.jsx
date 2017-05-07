@@ -1,4 +1,5 @@
 var React = require('react');
+import {Button} from 'react-materialize';
 
 var Candidate= React.createClass({
 
@@ -49,6 +50,7 @@ var Candidate= React.createClass({
         Travel : {convertingBooleans(union,travel,passport).travel},
         Passport: {convertingBooleans(union,travel,passport).passport}
         </a>
+        <Button className="waves-effect waves-light btn">Email Candidate!</Button>
       </div>
     )
   }

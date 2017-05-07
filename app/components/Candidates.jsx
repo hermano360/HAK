@@ -36,6 +36,7 @@ var Candidates= React.createClass({
 
     return (
       <div>
+        <h1>Candidates Available</h1>
         {renderCandidates()}
           <Button className="waves-effect waves-light btn" onClick={this.handleClick}>Another Query?</Button>
           <a className="waves-effect waves-light btn amber darken-1 white-text" href="#">Start Over</a>

@@ -7,9 +7,9 @@ var employersignup= React.createClass({
   },
   render: function(){
     return (
-      <div className="container center-align">
+      <div >
         <Row>
-          <Col s={12}>
+          <Col s={12} className="container center-align">
             <h2>Employer Sign Up Form</h2>
           </Col>
         </Row>
@@ -19,10 +19,13 @@ var employersignup= React.createClass({
             <Input s={12} id="password" className="validate" type="password" label="password" />
             <Input s={12} id="confirm-password" className="validate" type="password" label="password" />
           </Col>
-          <Col s={12}>
+          <Col s={4} offset='s2'>
             <a className="waves-effect waves-light btn" href="#">Cancel</a>
+          </Col>
+          <Col s={4}>
             <Button className="waves-effect waves-light btn" onClick={this.handleClick}>Sign Up!</Button>
           </Col>
+
         </Row>
       </div>
     )
