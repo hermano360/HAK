@@ -32,8 +32,8 @@ var talentSignup= React.createClass({
             <Input s={12} id="passport" class="validate" type='checkbox' value='yes' label='Do You Have an Active Passport?' />
           </Col>
           <Col s={12}>
-            <a class="waves-effect waves-light btn" href="#">Cancel</a>
-            <a class="waves-effect waves-light btn" href="profile.html">Sign Up!</a>
+            <a class="waves-effect waves-light btn amber darken-1" href="#">Cancel</a>
+            <a class="waves-effect waves-light btn amber darken-1" href="#">Sign Up!</a>
           </Col>
         </Row>
       </div>
