@@ -11,21 +11,21 @@ var Navbar = React.createClass({
             <IndexLink href="/" className="brand-logo">EFlash</IndexLink>
             <ul className="right hide-on-med-and-down">
               <li><IndexLink href="/">Home</IndexLink></li>
-              <li><Link href="sign-in">Sign In</Link></li>
-              <li><Link href="sign-up">Sign Up</Link></li>
-              <li><Link href="about-us">About Us</Link></li>
+              <li><Link href="#/signin">Sign In</Link></li>
+              <li><Link href="#/signup">Sign Up</Link></li>
+              <li><Link href="#/aboutus">About Us</Link></li>
             </ul>
           </div>
           <div className="nav-content">
             <Row className="center-align hide-on-large-only">
               <Col s={4} className="right-align">
-                <Link href="sign-in">Sign In</Link>
+                <Link href="#/signin">Sign In</Link>
               </Col>
               <Col s={4} className="center-align">
-                <Link href="sign-up">Sign Up</Link>
+                <Link href="#/signup">Sign Up</Link>
               </Col>
               <Col s={4} className="left-align">
-                <Link href="about-us">About Us</Link>
+                <Link href="#/aboutus">About Us</Link>
               </Col>
             </Row>
             <br/>

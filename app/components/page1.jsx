@@ -12,12 +12,12 @@ var page1= React.createClass({
           </Col>
           <Row>
             <Col s={12}>
-              <a className="waves-effect waves-light btn amber darken-1 white-text" href="#">Sign Up to Get Hired</a>
+              <a className="waves-effect waves-light btn amber darken-1 white-text" href="#/talentsignup">Sign Up to Get Hired</a>
             </Col>
           </Row>
           <Row>
             <Col s={12}>
-              <a className="waves-effect waves-light btn amber darken-1 white-text" href="#">Sign Up to Find the Best Talent</a>
+              <a className="waves-effect waves-light btn amber darken-1 white-text" href="#/employer">Sign Up to Find the Best Talent</a>
             </Col>
           </Row>
         </Row>
