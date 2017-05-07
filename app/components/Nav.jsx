@@ -7,7 +7,9 @@ var Nav = React.createClass({
       <div className='top-bar'>
         <div className='top-bar-left'>
           <ul className='menu'>
-            <li className='menu-text'>In A Flash</li>
+            <li className='menu-text'>
+              <IndexLink to="/" activeClassName="active-link">EFlash</IndexLink>
+            </li>
             <li>
               <IndexLink to="/" activeClassName="active-link">page1</IndexLink>
             </li>
