@@ -30,10 +30,15 @@ var Query= React.createClass({
       if(stage==='main'){
         return (
           <Row>
-            <Col s={12}>
+            <Col s={4} offset="s2">
               <Button className="waves-effect waves-light btn" onClick={this.newQuery}>New Query</Button>
-              <Button className="waves-effect waves-light btn" onClick={this.pastQueries}>Past Queries</Button>
+
             </Col>
+            <Col s={4}>
+              <Button className="waves-effect waves-light btn" onClick={this.pastQueries}>Past Queries</Button>
+
+            </Col>
+
           </Row>
         )
       } else if(stage==='new'){
@@ -50,7 +55,7 @@ var Query= React.createClass({
       <div className="container center-align">
         <Row>
           <Col s={12}>
-            <h1>Query</h1>
+            <h1>Queries</h1>
           </Col>
         </Row>
         {renderQuery()}

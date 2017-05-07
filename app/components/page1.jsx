@@ -4,7 +4,7 @@ import { Row, Col } from 'react-materialize';
 var page1= React.createClass({
   render: function(){
     return (
-      <div className="container center-align">
+      <div className="container center-align small-centered medium-6 large-4">
         <Row>
           <Col s={12}>
             <h1>Welcome to EFlash!</h1>

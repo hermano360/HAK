@@ -6,7 +6,7 @@ var signup= React.createClass({
     return (
       <div className="container center-align">
         <Row>
-          <Col s={6}>
+          <Col s={6} m={6} l={6}>
             <h2>Looking for Work?</h2>
             <p>
               We pull data from your IMDb page to keep hiring agents up to date
@@ -19,7 +19,7 @@ var signup= React.createClass({
             </p>
             <a href="#/talentsignup" className="waves-effect waves-light btn amber darken-1 white-text">Get Started</a>
           </Col>
-          <Col s={6}>
+          <Col s={6} m={6} l={6}>
             <h2>Trying to Build the Right Team?</h2>
             <p>
               Get access to our database of available contract workers. Narrow
