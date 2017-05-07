@@ -15,7 +15,7 @@ var talentsignup= React.createClass({
           <Col s={12}>
             <div className="row valign-wrapper flow-text">
               <div className="col s4">
-                <img src="http://ia.media-imdb.com/images/M/MV5BMTczNjM0NDY0Ml5BMl5BcG5nXkFtZTgwMTk1MzQ2OTE@._V1_.png" className="imdb_signup_logo"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/1200px-IMDB_Logo_2016.svg.png" className="imdb_signup_logo"/>
               </div>
               <div className="col s8 left-align">
                 <p>
