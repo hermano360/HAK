@@ -8,7 +8,7 @@ var talentsignup= React.createClass({
         <Row>
           <Col s={12}>
             <br/>
-            <h2 className="red-text text-darken-2"><strong>Talent Sign Up Form</strong></h2>
+            <h3 className="red-text text-darken-2"><strong>Talent Sign Up Form</strong></h3>
           </Col>
         </Row>
         <Row>
@@ -17,7 +17,7 @@ var talentsignup= React.createClass({
               <div className="col s4">
                 <img src="http://ia.media-imdb.com/images/M/MV5BMTczNjM0NDY0Ml5BMl5BcG5nXkFtZTgwMTk1MzQ2OTE@._V1_.png" className="imdb_signup_logo"/>
               </div>
-              <div className="col s8">
+              <div className="col s8 left-align">
                 <p>
                   Enter a link to your IMDb Page and we'll make sure that all of your credits are up to date
                 </p>
