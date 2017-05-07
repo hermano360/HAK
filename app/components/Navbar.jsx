@@ -13,7 +13,7 @@ var Navbar = React.createClass({
               <li><IndexLink href="/">Home</IndexLink></li>
               <li><Link href="#/signin">Sign In</Link></li>
               <li><Link href="#/signup">Sign Up</Link></li>
-              <li><Link href="about-us">About Us</Link></li>
+              <li><Link href="#/aboutus">About Us</Link></li>
             </ul>
           </div>
           <div className="nav-content">
@@ -25,7 +25,7 @@ var Navbar = React.createClass({
                 <Link href="#/signup">Sign Up</Link>
               </Col>
               <Col s={4} className="left-align">
-                <Link href="about-us">About Us</Link>
+                <Link href="#/aboutus">About Us</Link>
               </Col>
             </Row>
             <br/>

@@ -1,15 +1,20 @@
 var React = require('react');
-import { Button, Icon, Card, Row, Col,Input} from 'react-materialize';
+import { Button,Input} from 'react-materialize';
 
 var Querynew= React.createClass({
   onSearch:function(){
-    console.log(this.refs.title);
-    this.props.changePhase();
+    this.props.changePhase({
+      actor:3,
+      writer:5,
+      union:false,
+      travel:true,
+      passport:true
+    });
   },
   render: function(){
     return (
       <div>
-        <Input s={12} ref="title" className="validate" type="text" label="Query Title" />
+        <Input s={12} id="title" className="validate" type="text" label="Query Title" />
         <Input s={6} id="actor" className="validate" type="text" label="Actor Credits" />
         <Input s={6} id="writer" className="validate" type="text" label="Writer Credits" />
         <Input s={12} id="union" className="validate" type='checkbox' value='yes' label='Union/Union Eligible?' />

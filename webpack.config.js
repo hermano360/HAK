@@ -27,6 +27,8 @@ module.exports = {
       page1: 'app/components/page1.jsx',
       page2: 'app/components/page2.jsx',
       Candidates:'app/components/Candidates.jsx',
+      Candidate:'app/components/Candidate.jsx',
+      CandidatesAPI:'app/api/CandidatesAPI.jsx',
       Navbar: 'app/components/Navbar.jsx',
       Main: 'app/components/Main.jsx',
       custom: 'app/components/custom.js',
@@ -37,7 +39,9 @@ module.exports = {
       employersignup: 'app/components/employersignup.jsx',
       Query: 'app/components/Query.jsx',
       Querynew: 'app/components/Querynew.jsx',
-      Querypast: 'app/components/Querypast.jsx'
+      Querypast: 'app/components/Querypast.jsx',
+      Thankyou: 'app/components/Thankyou.jsx',
+      Aboutus: 'app/components/Aboutus.jsx'
     },
     extensions: ['','.js','.jsx']
   },

@@ -15,12 +15,14 @@ var Query= React.createClass({
     })
   },
   pastQueries:function(){
+    console.log('past');
     this.setState({
       stage:'past'
     })
   },
-  changePhase:function(){
-    this.props.changePhase();
+  changePhase:function(form){
+    console.log("query",form);
+    this.props.changePhase(form);
   },
   render: function(){
     var {stage} = this.state;
@@ -39,7 +41,9 @@ var Query= React.createClass({
           <Querynew changePhase={this.changePhase}/>
         )
       } else if(stage==='past'){
+        return (
         <Querypast changePhase={this.changePhase}/>
+        )
       }
     }
     return (

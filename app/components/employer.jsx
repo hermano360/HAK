@@ -7,18 +7,32 @@ var employer= React.createClass({
   getInitialState: function(){
     return {
       phase:'signup',
-      actor: 0,
-      writer:0
+      actor:0,
+      writer:0,
+      union:true,
+      travel:true,
+      passport:true
     };
   },
   signupSubmission: function(){
     this.setState({phase:'query'})
   },
-  querySubmission: function(){
-    this.setState({phase:'display'})
+  querySubmission: function(form){
+    console.log("employer",form);
+    this.setState({
+      phase:'display',
+      actor:form.actor,
+      writer:form.writer,
+      union:form.union,
+      travel:form.travel,
+      passport:form.passport
+    });
+  },
+  newQuery: function(){
+    this.setState({phase:'query'});
   },
   render: function(){
-    var {phase} = this.state;
+    var {phase,actor,writer,union,travel,passport} = this.state;
     if(phase==='signup'){
       return (
         <Employersignup changePhase={this.signupSubmission}/>
@@ -29,7 +43,7 @@ var employer= React.createClass({
         )
     } else if( phase ==='display') {
       return (
-        <Candidates/>
+        <Candidates actor={actor} writer={writer} union={union} travel={travel} passport={passport} changePhase={this.newQuery}/>
       )
     }
   }

@@ -8,6 +8,8 @@ var talentsignup = require('talentsignup');
 var employer = require('employer');
 var Candidates = require('Candidates');
 var Main = require('Main');
+var Thankyou = require('Thankyou');
+var Aboutus = require('Aboutus');
 // Load foundation
 $(document).foundation();
 
@@ -20,6 +22,8 @@ ReactDOM.render(
 		<Route path="/signup" component={signup}/>
 		<Route path="/talentsignup" component={talentsignup}/>
 		<Route path="/employer" component={employer}/>
+		<Route path="/thankyou" component={Thankyou}/>
+		<Route path="/aboutus" component={Aboutus}/>
 		<IndexRoute component={page1}/>
 		</Route>
 	</Router>,
