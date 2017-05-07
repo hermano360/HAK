@@ -9,8 +9,9 @@ var employersignup= React.createClass({
     return (
       <div >
         <Row>
+          <br/>
           <Col s={12} className="container center-align">
-            <h2>Employer Sign Up Form</h2>
+            <h3 className="red-text text-darken-2"><strong>Employer Sign Up Form</strong></h3>
           </Col>
         </Row>
         <Row>
